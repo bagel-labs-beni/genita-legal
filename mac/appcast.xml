@@ -5,6 +5,15 @@
     <link>https://bagel-labs-beni.github.io/genita-legal/mac/appcast.xml</link>
     <language>en</language>
     <item>
+      <title>Genita 0.1 (131)</title>
+      <pubDate>Tue, 03 Nov 2026 01:29:35 GMT</pubDate>
+      <sparkle:version>131</sparkle:version>
+      <sparkle:shortVersionString>0.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Genita for Mac, build 131 (75e14f1).</p>]]></description>
+      <enclosure url="https://bagel-labs-beni.github.io/genita-legal/mac/Genita-Mac-131.dmg" sparkle:edSignature="aUbxnKVV15fFvESJ9ltgyxI6W82NdqAOMGG+jjFwvk02xCzhu/xzIc3QB7lN+lFzG/bN5PNPnjGwpPnaJO19CA==" length="18022667" type="application/octet-stream"/>
+    </item>
+    <item>
       <title>Genita 0.1 (111)</title>
       <pubDate>Mon, 02 Nov 2026 23:10:00 GMT</pubDate>
       <sparkle:version>111</sparkle:version>
