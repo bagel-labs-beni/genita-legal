@@ -5,6 +5,15 @@
     <link>https://bagel-labs-beni.github.io/genita-legal/mac/appcast.xml</link>
     <language>en</language>
     <item>
+      <title>Genita 0.1 (171)</title>
+      <pubDate>Tue, 03 Nov 2026 12:36:36 GMT</pubDate>
+      <sparkle:version>171</sparkle:version>
+      <sparkle:shortVersionString>0.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Genita for Mac, build 171 (cfc1017).</p>]]></description>
+      <enclosure url="https://bagel-labs-beni.github.io/genita-legal/mac/Genita-Mac-171.dmg" sparkle:edSignature="6lbTSpVuxh0QoAwlsV8Bn9F0jb5/mJjS0qlyTnSIHb3m1cCbf84Y3Uximj8wa+fHDL7/b7DzA/9K04XiOy9ZCQ==" length="19203309" type="application/octet-stream"/>
+    </item>
+    <item>
       <title>Genita 0.1 (161)</title>
       <pubDate>Tue, 03 Nov 2026 06:04:48 GMT</pubDate>
       <sparkle:version>161</sparkle:version>
@@ -21,15 +30,6 @@
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
       <description><![CDATA[<p>Genita for Mac, build 151 (e49a281).</p>]]></description>
       <enclosure url="https://bagel-labs-beni.github.io/genita-legal/mac/Genita-Mac-151.dmg" sparkle:edSignature="usJm4lGaKZBMay7/2EXrwbEeyTuKC2av4u6RjpSRusVNgWXbI10Av59u4qunOV97jRacMKF1ewpGV8RfzpZMAg==" length="18022646" type="application/octet-stream"/>
-    </item>
-    <item>
-      <title>Genita 0.1 (141)</title>
-      <pubDate>Tue, 03 Nov 2026 01:56:11 GMT</pubDate>
-      <sparkle:version>141</sparkle:version>
-      <sparkle:shortVersionString>0.1</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[<p>Genita for Mac, build 141 (95acde0).</p>]]></description>
-      <enclosure url="https://bagel-labs-beni.github.io/genita-legal/mac/Genita-Mac-141.dmg" sparkle:edSignature="OQyr/jZWnDrzlWk81B9rfm87UcTEQaxsUMSpvY242K5MuZTSP7sKqYzwJWL3z/49yC118bADsNinJrw7FEcZCw==" length="18022631" type="application/octet-stream"/>
     </item>
   </channel>
 </rss>
