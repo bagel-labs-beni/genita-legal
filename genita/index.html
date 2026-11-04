@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genita</title>
+<meta name="description" content="Someone is getting ready to meet you. Request early access to Genita.">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="canonical" href="https://bagel-labs-beni.github.io/genita-legal/genita/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Genita">
+<meta property="og:title" content="Genita">
+<meta property="og:description" content="Someone is getting ready to meet you. Request early access.">
+<meta property="og:url" content="https://bagel-labs-beni.github.io/genita-legal/genita/">
+<meta property="og:image" content="https://bagel-labs-beni.github.io/genita-legal/genita/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Genita. Someone is getting ready to meet you.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Genita">
+<meta name="twitter:description" content="Someone is getting ready to meet you. Request early access.">
+<meta name="twitter:image" content="https://bagel-labs-beni.github.io/genita-legal/genita/og.png">
+<meta name="twitter:image:alt" content="Genita. Someone is getting ready to meet you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --bg:#0a0a0b;
+  --fg:#f3efe9;
+  --muted:#8f8a83;
+  --faint:#827d77;
+  --field:#141416;
+  --line:#2b2a28;
+  --line-strong:#75706a;
+  --field-line:#625e59;
+  --warm:255,222,190;
+  --error:#f0a48f;
+  --radius:14px;
+  --shade:#040405;
+  --serif:"Noto Serif KR","Noto Serif",Georgia,"Times New Roman",serif;
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  background:var(--bg);color:var(--fg);font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+.page{
+  overflow:hidden;
+  min-height:100vh;min-height:100svh;
+  display:grid;grid-template-rows:auto 1fr auto;
+  padding:max(20px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom));
+}
+header{display:flex;justify-content:center;padding-top:12px}
+.wordmark{display:block;width:76px;height:auto;color:var(--fg)}
+.wordmark svg{display:block;width:100%;height:auto}
+main{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:24px 0 32px;
+}
+
+/* Presence: a backlit figure behind frosted glass. CSS only. */
+.presence{
+  position:relative;width:220px;height:220px;margin:0 auto 12px;
+  pointer-events:none;
+}
+.halo{
+  position:absolute;inset:-30%;border-radius:50%;
+  background:radial-gradient(closest-side at 50% 40%,rgba(var(--warm),.38),rgba(var(--warm),.13) 45%,rgba(var(--warm),0) 68%);
+  filter:blur(18px);
+  animation:breathe 7s ease-in-out infinite;
+}
+.figure{position:absolute;inset:0;filter:blur(10px);animation:sway 11s ease-in-out infinite}
+.figure .head{
+  position:absolute;left:50%;top:20%;width:31%;height:37%;
+  transform:translateX(-50%);border-radius:50% 50% 47% 47%;background:var(--shade);
+}
+.figure .shoulders{
+  position:absolute;left:50%;top:58%;width:84%;height:80%;
+  transform:translateX(-50%);border-radius:50%;background:var(--shade);
+}
+@keyframes breathe{
+  0%,100%{transform:scale(.96);opacity:.72}
+  50%{transform:scale(1.05);opacity:1}
+}
+@keyframes sway{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-3px)}
+}
+
+h1,.sub,.signup,.done{position:relative;z-index:1}
+h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:36px;line-height:1.14;letter-spacing:-.02em;
+  margin:0;max-width:11ch;text-wrap:balance;
+}
+.sub{
+  margin:16px 0 0;color:var(--muted);font-size:15px;line-height:1.5;letter-spacing:-.01em;
+}
+
+.signup{width:100%;max-width:358px;margin:32px auto 0}
+form{display:flex;flex-direction:column;gap:10px}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+input[type=email]{
+  width:100%;height:52px;padding:0 16px;
+  font:500 16px/1 var(--sans);letter-spacing:-.01em;color:var(--fg);
+  background:var(--field);border:1px solid var(--field-line);border-radius:var(--radius);
+  outline:none;transition:border-color .16s ease,box-shadow .16s ease;
+  -webkit-appearance:none;appearance:none;
+}
+input[type=email]::placeholder{color:var(--faint)}
+input[type=email]:hover{border-color:var(--line-strong)}
+input[type=email]:focus-visible{border-color:rgba(var(--warm),.7);box-shadow:0 0 0 3px rgba(var(--warm),.14)}
+input[type=email][aria-invalid=true]{border-color:var(--error)}
+input[type=email][aria-invalid=true]:focus-visible{box-shadow:0 0 0 3px rgba(240,164,143,.16)}
+button{
+  height:52px;padding:0 22px;border:0;border-radius:var(--radius);
+  font:600 16px/1 var(--sans);letter-spacing:-.01em;
+  color:var(--bg);background:var(--fg);cursor:pointer;
+  transition:transform .12s ease,opacity .16s ease,background-color .16s ease;
+  -webkit-tap-highlight-color:transparent;white-space:nowrap;
+}
+button:hover{background:#fffaf3}
+button:active{transform:scale(.985)}
+button:focus-visible{outline:2px solid rgba(var(--warm),.9);outline-offset:3px}
+button[disabled]{opacity:.55;cursor:default;transform:none}
+.status{min-height:20px;margin:12px 0 0;font-size:13px;line-height:1.5;color:var(--muted)}
+.status.err{color:var(--error)}
+
+.done{display:none;margin-top:32px}
+.done p{margin:0}
+.done .t{font-family:var(--serif);font-size:22px;line-height:1.3;letter-spacing:-.01em}
+.done .s{margin-top:8px;color:var(--muted);font-size:14px;line-height:1.5}
+.is-done .signup{display:none}
+.is-done .done{display:block;animation:rise .5s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+footer{
+  display:flex;justify-content:center;gap:14px;
+  font-size:13px;line-height:1.5;color:var(--muted);
+}
+footer a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line-strong);text-underline-offset:4px;display:inline-block;padding:12px 4px;margin:-12px -4px}
+footer a:hover{color:var(--fg)}
+footer a:focus-visible{outline:2px solid rgba(var(--warm),.9);outline-offset:3px;border-radius:2px}
+
+@media (min-width:760px){
+  .page{padding:32px 40px}
+  header{padding-top:8px}
+  .wordmark{width:88px}
+  .presence{width:300px;height:300px;margin-bottom:16px}
+  h1{font-size:60px;max-width:none}
+  h1 .l{display:block}
+  .sub{font-size:17px;margin-top:20px}
+  .signup{max-width:460px;margin-top:40px}
+  form{flex-direction:row;gap:8px}
+  input[type=email]{flex:1;min-width:0}
+}
+@media (max-height:700px) and (max-width:759px){
+  .presence{width:160px;height:160px;margin-bottom:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  .halo,.figure,.is-done .done{animation:none}
+  input[type=email],button{transition:none}
+}
+
+/* OG card render (?og=1): fixed 1200x630 composition, no form. */
+.og .page{width:1200px;height:630px;min-height:0;padding:44px 64px}
+.og .signup,.og footer,.og .done{display:none}
+.og main{padding:0}
+.og .presence{width:230px;height:230px;margin-bottom:6px}
+.og .halo,.og .figure{animation:none}
+.og h1{font-size:62px;max-width:none}
+.og h1 .l{display:block}
+.og .sub{font-size:20px;margin-top:18px}
+.og .wordmark{width:96px}
+</style>
+</head>
+<body>
+<div class="page" id="page">
+  <header>
+    <a href="./" aria-label="Genita" style="color:inherit">
+      <span class="wordmark" aria-hidden="true"><svg focusable="false" viewBox="0 0 63.1423 22.6259" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M50.8522 10.6831C50.8522 9.48162 51.0983 8.41763 51.5905 7.49117C52.0971 6.5647 52.7775 5.84814 53.6316 5.34148C54.5001 4.82034 55.4556 4.55977 56.4978 4.55977C57.4388 4.55977 58.2567 4.74796 58.9515 5.12434C59.6608 5.48624 60.2254 5.94223 60.6452 6.49232V4.7552H63.1423V16.7196H60.6452V14.9391C60.2254 15.5036 59.6536 15.9741 58.9298 16.3505C58.206 16.7269 57.3809 16.9151 56.4544 16.9151C55.4266 16.9151 54.4857 16.6545 53.6316 16.1334C52.7775 15.5977 52.0971 14.8595 51.5905 13.9185C51.0983 12.9631 50.8522 11.8846 50.8522 10.6831ZM60.6452 10.7266C60.6452 9.90143 60.4715 9.18486 60.1241 8.57687C59.7911 7.96888 59.3496 7.50564 58.7995 7.18717C58.2494 6.8687 57.6559 6.70946 57.019 6.70946C56.382 6.70946 55.7885 6.8687 55.2384 7.18717C54.6883 7.49117 54.2396 7.94716 53.8921 8.55516C53.5592 9.14867 53.3927 9.858 53.3927 10.6831C53.3927 11.5083 53.5592 12.2321 53.8921 12.8545C54.2396 13.477 54.6883 13.9547 55.2384 14.2877C55.803 14.6061 56.3965 14.7654 57.019 14.7654C57.6559 14.7654 58.2494 14.6061 58.7995 14.2877C59.3496 13.9692 59.7911 13.506 60.1241 12.898C60.4715 12.2755 60.6452 11.5517 60.6452 10.7266Z" fill="currentColor"/><path d="M46.799 6.77452V13.3973C46.799 13.8461 46.9003 14.1718 47.103 14.3744C47.3201 14.5626 47.682 14.6567 48.1887 14.6567H49.7087V16.7195H47.7544C46.6398 16.7195 45.7857 16.459 45.1922 15.9378C44.5986 15.4167 44.3019 14.5699 44.3019 13.3973V6.77452H42.8905V4.75511H44.3019V1.78029H46.799V4.75511H49.7087V6.77452H46.799Z" fill="currentColor"/><path d="M40.4946 3.17027C40.0459 3.17027 39.6695 3.01827 39.3655 2.71427C39.0615 2.41028 38.9095 2.0339 38.9095 1.58514C38.9095 1.13639 39.0615 0.76001 39.3655 0.456014C39.6695 0.152017 40.0459 1.81794e-05 40.4946 1.81794e-05C40.9289 1.81794e-05 41.2981 0.152017 41.602 0.456014C41.906 0.76001 42.058 1.13639 42.058 1.58514C42.058 2.0339 41.906 2.41028 41.602 2.71427C41.2981 3.01827 40.9289 3.17027 40.4946 3.17027ZM41.7106 4.75539V16.7198H39.2352V4.75539H41.7106Z" fill="currentColor"/><path d="M32.6413 4.55977C33.5822 4.55977 34.4219 4.7552 35.1601 5.14605C35.9129 5.5369 36.4992 6.11595 36.919 6.88318C37.3388 7.6504 37.5487 8.57687 37.5487 9.66257V16.7196H35.095V10.0317C35.095 8.96048 34.8272 8.14259 34.2916 7.57802C33.756 6.99898 33.0249 6.70946 32.0985 6.70946C31.172 6.70946 30.4337 6.99898 29.8836 7.57802C29.348 8.14259 29.0802 8.96048 29.0802 10.0317V16.7196H26.6048V4.7552H29.0802V6.12318C29.4855 5.631 29.9994 5.24738 30.6219 4.97234C31.2588 4.6973 31.932 4.55977 32.6413 4.55977Z" fill="currentColor"/><path d="M25.3672 10.4443C25.3672 10.893 25.3383 11.2984 25.2804 11.6603H16.1388C16.2111 12.6157 16.5658 13.3829 17.2027 13.962C17.8397 14.541 18.6214 14.8305 19.5479 14.8305C20.8797 14.8305 21.8206 14.2732 22.3707 13.1585H25.0415C24.6796 14.2587 24.021 15.1635 23.0655 15.8728C22.1246 16.5676 20.952 16.9151 19.5479 16.9151C18.4043 16.9151 17.3765 16.6617 16.4645 16.1551C15.5669 15.6339 14.8576 14.9101 14.3365 13.9837C13.8298 13.0427 13.5765 11.957 13.5765 10.7266C13.5765 9.4961 13.8226 8.41763 14.3148 7.49117C14.8214 6.55023 15.5235 5.82642 16.421 5.31976C17.333 4.8131 18.3753 4.55977 19.5479 4.55977C20.677 4.55977 21.6831 4.80587 22.5661 5.29805C23.4491 5.79024 24.1368 6.48509 24.6289 7.3826C25.1211 8.26564 25.3672 9.2862 25.3672 10.4443ZM22.7833 9.66257C22.7688 8.75058 22.4431 8.01954 21.8061 7.46945C21.1692 6.91937 20.3802 6.64432 19.4393 6.64432C18.5852 6.64432 17.8542 6.91937 17.2462 7.46945C16.6382 8.00507 16.2763 8.73611 16.1605 9.66257H22.7833Z" fill="currentColor"/><path d="M5.64565 4.55977C6.57212 4.55977 7.39001 4.74796 8.09934 5.12434C8.82314 5.48624 9.3877 5.94223 9.79303 6.49232V4.7552H12.2901V16.9151C12.2901 18.0152 12.0585 18.9924 11.5953 19.8465C11.1321 20.715 10.4589 21.3954 9.57589 21.8876C8.70733 22.3798 7.66506 22.6259 6.44907 22.6259C4.82776 22.6259 3.48148 22.2422 2.41026 21.475C1.33903 20.7223 0.731039 19.6945 0.586279 18.3916H3.03997C3.22815 19.0141 3.62624 19.5135 4.23424 19.8899C4.85671 20.2807 5.59498 20.4762 6.44907 20.4762C7.44792 20.4762 8.25134 20.1722 8.85933 19.5642C9.4818 18.9562 9.79303 18.0731 9.79303 16.9151V14.9174C9.37323 15.4819 8.80142 15.9596 8.07762 16.3505C7.3683 16.7269 6.55764 16.9151 5.64565 16.9151C4.60338 16.9151 3.64796 16.6545 2.7794 16.1334C1.92531 15.5977 1.24494 14.8595 0.738277 13.9185C0.246093 12.9631 0 11.8846 0 10.6831C0 9.48162 0.246093 8.41763 0.738277 7.49117C1.24494 6.5647 1.92531 5.84814 2.7794 5.34148C3.64796 4.82034 4.60338 4.55977 5.64565 4.55977ZM9.79303 10.7266C9.79303 9.90143 9.61932 9.18486 9.2719 8.57687C8.93895 7.96888 8.49743 7.50564 7.94734 7.18717C7.39725 6.8687 6.80373 6.70946 6.16679 6.70946C5.52984 6.70946 4.93633 6.8687 4.38624 7.18717C3.83615 7.49117 3.38739 7.94716 3.03997 8.55516C2.70702 9.14867 2.54054 9.858 2.54054 10.6831C2.54054 11.5083 2.70702 12.2321 3.03997 12.8545C3.38739 13.477 3.83615 13.9547 4.38624 14.2877C4.9508 14.6061 5.54432 14.7654 6.16679 14.7654C6.80373 14.7654 7.39725 14.6061 7.94734 14.2877C8.49743 13.9692 8.93895 13.506 9.2719 12.898C9.61932 12.2755 9.79303 11.5517 9.79303 10.7266Z" fill="currentColor"/></g></svg></span>
+    </a>
+  </header>
+
+  <main>
+    <div class="presence" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="figure"><div class="head"></div><div class="shoulders"></div></div>
+    </div>
+
+    <h1><span class="l">Someone is getting ready</span> <span class="l">to meet you.</span></h1>
+    <p class="sub">Personal from the first hello.</p>
+
+    <div class="signup">
+      <form id="f" novalidate>
+        <label class="sr" for="email">Email address</label>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email"
+          autocapitalize="off" spellcheck="false" maxlength="254" placeholder="you@email.com" required
+          aria-describedby="status">
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button id="go" type="submit">Request early access</button>
+      </form>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="done" id="done" role="status" aria-live="polite">
+      <p class="t">You're on the list.</p>
+      <p class="s">We'll write when it's your turn.</p>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://bagel-labs-beni.github.io/genita-legal/privacy/">Privacy</a>
+    <span>&copy; 2026 Bagel Labs</span>
+  </footer>
+</div>
+<script>
+(function(){
+  var API = 'https://genita-api.thebeni.ai/v1/early-access';
+  var params = new URLSearchParams(location.search);
+  if (params.get('og') === '1') document.documentElement.classList.add('og');
+
+  var page = document.getElementById('page');
+  var form = document.getElementById('f');
+  var email = document.getElementById('email');
+  var hp = document.getElementById('company');
+  var btn = document.getElementById('go');
+  var status = document.getElementById('status');
+  var KEY = 'genita-early-access';
+
+  var raw = (params.get('utm_source') || params.get('ref') || 'x-teaser').toLowerCase();
+  var source = /^[a-z0-9_-]{1,32}$/.test(raw) ? raw : 'x-teaser';
+
+  function done(){ page.classList.add('is-done'); }
+  try { if (localStorage.getItem(KEY) === '1' && params.get('og') !== '1') done(); } catch (e) {}
+
+  function say(msg, isErr){
+    status.textContent = msg || '';
+    status.classList.toggle('err', !!isErr);
+    email.setAttribute('aria-invalid', isErr === 'field' ? 'true' : 'false');
+  }
+  function valid(v){ return v.length <= 254 && /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/.test(v) && !/\.\./.test(v); }
+
+  email.addEventListener('input', function(){ if (status.classList.contains('err')) say(''); });
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var v = email.value.trim().toLowerCase();
+    if (!valid(v)) { say('That email doesn’t look quite right.', 'field'); email.focus(); return; }
+    if (hp.value) { done(); return; }
+
+    btn.disabled = true; btn.textContent = 'Sending…'; say('');
+    var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timer = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 12000);
+
+    fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: v, source: source }),
+      signal: ctrl ? ctrl.signal : undefined,
+      credentials: 'omit'
+    }).then(function(r){
+      clearTimeout(timer);
+      if (r.ok) {
+        try { localStorage.setItem(KEY, '1'); } catch (e) {}
+        done(); return;
+      }
+      if (r.status === 400) say('That email doesn’t look quite right.', 'field');
+      else if (r.status === 429) say('Lots of hellos at once. Try again in a minute.', true);
+      else if (r.status === 404) say('Early access isn’t open yet. Please try again soon.', true);
+      else say('Something went quiet on our side. Please try again.', true);
+    }).catch(function(){
+      clearTimeout(timer);
+      say('We couldn’t reach Genita. Check your connection and try again.', true);
+    }).then(function(){
+      btn.disabled = false; btn.textContent = 'Request early access';
+    });
+  });
+})();
+</script>
+</body>
+</html>
