@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genita</title>
+<!--META-->
+<meta name="description" content="Not an avatar we picked for you. Request early access to Genita.">
+<meta name="theme-color" content="#FDFDFD">
+<link rel="canonical" href="https://bagel-labs-beni.github.io/genita-legal/genita/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Genita">
+<meta property="og:title" content="Genita">
+<meta property="og:description" content="Not an avatar we picked for you. Knows you before hello. Sees what you see. Follows you from iPhone to Mac.">
+<meta property="og:url" content="https://bagel-labs-beni.github.io/genita-legal/genita/">
+<meta property="og:image" content="https://bagel-labs-beni.github.io/genita-legal/genita/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Genita. Not an avatar we picked for you.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Genita">
+<meta name="twitter:description" content="Not an avatar we picked for you. Follows you from iPhone to Mac.">
+<meta name="twitter:image" content="https://bagel-labs-beni.github.io/genita-legal/genita/og.png">
+<meta name="twitter:image:alt" content="Genita. Not an avatar we picked for you.">
+<!--/META-->
+<link rel="preload" href="assets/KMU80TTFSungkokSemiSerif.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+@font-face{font-family:"KMU Sungkok";src:url("assets/KMU80TTFSungkokSemiSerif.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Pretendard";src:url("assets/Pretendard-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Pretendard";src:url("assets/Pretendard-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Pretendard";src:url("assets/Pretendard-SemiBold.woff2") format("woff2");font-weight:600;font-display:swap}
+/* Layout: words left, a two-device stage right (desktop). Phone: stage on top, words below.
+   Story: one photo, veiled -> it comes alive -> it is the iPhone call -> the call moves into the Mac. */
+:root{
+  --ink:#111111;--paper:#FDFDFD;--white:#FFFFFF;--line:#E3E3E3;--field:#F1F1F1;--mute:#737373;--mute-2:#8A8A8A;
+  --blue:#00A2FF;--blue-on-ink:#54C1FF;--pill:rgba(17,17,17,.84);--glass:rgba(0,0,0,.42);--glass-line:rgba(255,255,255,.34);
+  --danger:#C4271B;--cream:#F4EDE2;--alu:#D9DADD;--alu-2:#B9BBC0;--bezel:#0E0E0F;--tl-r:#FF5F57;--tl-y:#FEBC2E;--tl-g:#28C840;
+  --orb-bg:#0C1824;--orb-bg-2:#16314A;
+  --serif:"KMU Sungkok",Georgia,"Times New Roman",serif;
+  --sans:"Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI",sans-serif;
+  --ease:cubic-bezier(.23,1,.32,1);--drawer:cubic-bezier(.32,.72,0,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--paper);color:var(--ink);font:400 16px/24px var(--sans);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-x:hidden}
+.page{position:relative;overflow:hidden;min-height:100vh;min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;
+  padding-block:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-bottom));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;align-items:center;justify-content:space-between;height:44px;position:relative;z-index:5}
+.logo{display:block;width:68px;color:var(--ink)} .logo svg{display:block;width:100%;height:auto}
+.eyebrow{font-size:13px;line-height:18px;color:var(--mute)}
+main{display:grid;gap:8px;align-content:start;position:relative;z-index:1}
+.copy{position:relative;z-index:4;min-width:0}
+h1{font:400 38px/1.12 var(--serif);letter-spacing:-.012em;margin:0;text-wrap:balance}
+h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+h1 .w>span{display:inline-block}
+.sub{margin:12px 0 0;font-size:16px;line-height:24px;color:var(--mute);text-wrap:pretty;max-width:30em}
+.signup{margin-top:24px}
+form{display:flex;flex-direction:column;gap:8px}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+input[type=email]{width:100%;height:52px;padding:0 16px;border:0;border-radius:14px;background:var(--field);font:400 16px/1 var(--sans);color:var(--ink);outline:none;
+  box-shadow:inset 0 0 0 1px transparent;transition:box-shadow .2s var(--ease),background-color .2s;-webkit-appearance:none;appearance:none}
+input[type=email]::placeholder{color:var(--mute-2)}
+input[type=email]:hover{background:#ECECEC}
+input[type=email]:focus-visible{background:var(--white);box-shadow:inset 0 0 0 1.5px var(--ink)}
+input[type=email][aria-invalid=true]{box-shadow:inset 0 0 0 1.5px var(--danger)}
+button.go{position:relative;height:52px;padding:0 22px;border:0;border-radius:14px;background:var(--ink);color:var(--paper);font:600 16px/1 var(--sans);cursor:pointer;white-space:nowrap;
+  transition:transform .12s var(--ease),opacity .2s;-webkit-tap-highlight-color:transparent}
+button.go:active{transform:scale(.97)}
+button.go:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+button.go[disabled]{opacity:.6;cursor:default;transform:none}
+.status{min-height:20px;margin:10px 0 0;font-size:13px;line-height:20px;color:var(--mute)}
+.status.err{color:var(--danger)}
+.done{display:none;margin-top:24px}
+.done .t{font:400 28px/1.2 var(--serif);margin:0}
+.done .s{margin:8px 0 0;font-size:16px;line-height:24px;color:var(--mute)}
+.done .x{margin:14px 0 0;font-size:15px;line-height:22px;color:var(--mute)}
+.done a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#BDBDBD;display:inline-block;padding:10px 2px;margin:-10px -2px}
+.done a:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:3px}
+.is-done .signup{display:none}
+.is-done .done{display:block;animation:up .7s var(--ease) both}
+footer{display:flex;gap:16px;font-size:13px;line-height:20px;color:var(--mute);position:relative;z-index:5;padding-top:12px}
+footer a{color:var(--mute);text-decoration:underline;text-underline-offset:3px;text-decoration-color:#C9C9C9;display:inline-block;padding:12px 4px;margin:-12px -4px}
+footer a:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:3px}
+
+/* ---------- Stage ---------- */
+.stage{position:relative;width:100%;height:372px;perspective:1600px;z-index:2;order:-1;margin-bottom:4px}
+.rig{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.glow{position:absolute;left:50%;top:48%;width:120%;aspect-ratio:1;margin:-60% 0 0 -60%;border-radius:50%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(244,237,226,.95),rgba(244,237,226,.45) 45%,rgba(253,253,253,0) 72%);will-change:transform}
+
+/* Mac (MacBook) */
+.mac{position:absolute;will-change:transform,opacity;transition:transform 1.1s var(--drawer),opacity .8s var(--ease)}
+.mac .lid{position:relative;border-radius:16px;background:var(--bezel);padding:2.4%;box-shadow:0 40px 80px -40px rgba(17,17,17,.45),0 0 0 1px rgba(0,0,0,.6)}
+.mac .lid::before{content:"";position:absolute;left:50%;top:0;width:13%;height:3.2%;margin-left:-6.5%;border-radius:0 0 8px 8px;background:#000;z-index:3}
+.mac .scr{position:relative;aspect-ratio:16/10;border-radius:6px;overflow:hidden;background:#141414}
+.mac .deck{position:relative;height:14px;margin:0 -5%;border-radius:2px 2px 14px 14px;background:linear-gradient(#E9EAEC,var(--alu) 40%,var(--alu-2));box-shadow:0 18px 30px -18px rgba(17,17,17,.5)}
+.mac .deck::before{content:"";position:absolute;left:50%;top:0;width:16%;height:5px;margin-left:-8%;border-radius:0 0 6px 6px;background:#C6C7CB}
+/* Mac window chrome over the call */
+.tl{position:absolute;left:12px;top:11px;display:flex;gap:7px;z-index:4}
+.tl i{width:11px;height:11px;border-radius:50%}
+/* Mac waiting screen (real Mac UI copy) */
+.wait{position:absolute;inset:0;background:var(--white);display:flex;flex-direction:column;justify-content:center;padding:0 9%;transition:opacity .6s var(--ease)}
+.wait b{font:400 clamp(16px,2.6vw,34px)/1.15 var(--serif);font-weight:400}
+.wait span{display:flex;align-items:center;gap:8px;margin-top:10px;color:var(--mute);font-size:clamp(10px,1.1vw,15px)}
+.wait span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.wait em{font-style:normal;display:grid;place-items:center;margin-top:18px;height:clamp(26px,3.4vw,46px);border-radius:12px;background:var(--ink);color:var(--paper);font-weight:600;font-size:clamp(10px,1.15vw,16px);transition:transform .14s var(--ease)}
+.pressing .wait em{transform:scale(.96)}
+.mcall{position:absolute;inset:0;opacity:0;transition:opacity .7s var(--ease)}
+.pill{position:absolute;left:50%;top:12px;z-index:5;display:flex;align-items:center;gap:7px;height:30px;padding:0 13px 0 11px;border-radius:999px;background:var(--white);color:var(--ink);
+  font:500 12.5px/1 var(--sans);white-space:nowrap;box-shadow:0 8px 24px rgba(17,17,17,.18);opacity:0;transform:translate(-50%,-10px);transition:transform .7s var(--drawer),opacity .5s var(--ease)}
+.pill i{position:relative;width:7px;height:7px;border-radius:50%;background:var(--blue)}
+.pill i::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--blue);opacity:0}
+.s-mac .pill{opacity:1;transform:translate(-50%,0)}
+.s-mac .pill i::after{animation:ping 1.6s var(--ease) .2s 2}
+
+/* iPhone */
+.phone{position:absolute;will-change:transform,opacity;transition:transform 1.1s var(--drawer),opacity .8s var(--ease)}
+.phone .body{position:relative;border-radius:48px;padding:3.6%;background:var(--bezel);box-shadow:0 40px 70px -30px rgba(17,17,17,.55),inset 0 0 0 1.5px #2A2A2C,0 0 0 1px #000}
+.phone .scr{position:relative;aspect-ratio:9/19.5;border-radius:40px;overflow:hidden;background:#141414}
+.island{position:absolute;left:50%;top:2.2%;width:31%;height:3.6%;margin-left:-15.5%;border-radius:999px;background:#000;z-index:6}
+.dark{position:absolute;inset:0;background:linear-gradient(155deg,#1b1b1d,#0b0b0c 60%);z-index:5;transition:opacity .7s var(--ease)}
+.dark::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.07),rgba(255,255,255,0) 40%)}
+
+/* Shared call UI */
+.face{position:absolute;inset:0;overflow:hidden}
+.face img,.face canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;opacity:0}
+.face img.f-neutral{opacity:1}
+.face[data-f="smile"] .f-smile,.face[data-f="warm"] .f-warm,.face[data-f="blink"] .f-blink,.face[data-f="A"] .f-A,.face[data-f="O"] .f-O,.face[data-f="EH"] .f-EH,
+.face[data-f="MBP"] .f-MBP,.face[data-f="FV"] .f-FV,.face[data-f="U"] .f-U{opacity:1}
+.face .breathe{position:absolute;inset:0;animation:breathe 6s ease-in-out infinite}
+.mac .face{background:#2a2622}
+.mac .face::before{content:"";position:absolute;inset:-30px;background:var(--bgimg,none) 50% 30%/cover;filter:blur(28px) brightness(.8) saturate(1.1)}
+.mac .face img{object-fit:contain;object-position:50% 100%}
+.orbmode .face img{display:none}
+.orbmode .mac .face::before{display:none}
+.orbmode .face canvas{opacity:1}
+.orbmode .face{background:radial-gradient(90% 70% at 50% 40%,var(--orb-bg-2),var(--orb-bg) 70%)}
+.cue{position:absolute;left:50%;transform:translateX(-50%);z-index:4;display:flex;align-items:center;gap:7px;height:30px;padding:0 13px 0 11px;border-radius:999px;background:var(--pill);color:var(--paper);font:500 13px/1 var(--sans);white-space:nowrap}
+.bars{display:flex;gap:2px;align-items:center;height:12px}
+.bars i{display:block;width:2.5px;height:100%;border-radius:2px;background:var(--blue-on-ink);transform:scaleY(.4);transition:transform .12s}
+.talking .bars i{animation:bar .9s ease-in-out infinite}.talking .bars i:nth-child(2){animation-delay:-.3s}.talking .bars i:nth-child(3){animation-delay:-.6s}
+.gl{position:absolute;z-index:4;width:40px;height:40px;border-radius:50%;background:var(--glass);box-shadow:inset 0 0 0 1px var(--glass-line);display:grid;place-items:center;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.gl img{width:18px;height:18px}
+.gl.mic{background:var(--white)} .gl.mic img{filter:invert(1)}
+.self{position:absolute;z-index:4;border-radius:12px;background:linear-gradient(160deg,#3a342f,#1d1a18);box-shadow:inset 0 0 0 1px var(--glass-line)}
+.caps{position:absolute;z-index:4;color:var(--paper);text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.caps p{margin:0;transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.caps .u{color:rgba(253,253,253,.62);font-weight:500}
+.caps .u::before{content:"\2713";color:var(--blue-on-ink);margin-right:6px}
+.caps .c{font-weight:600;margin-top:4px}
+.caps .wd{display:inline-block;opacity:0;transform:translateY(3px);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.caps .wd.on{opacity:1;transform:none}
+.caps.out p{opacity:0;transform:translateY(-4px)}
+.scrim{position:absolute;inset:auto 0 0;height:48%;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.5));z-index:3;pointer-events:none}
+.ring{position:absolute;left:50%;top:42%;width:60%;aspect-ratio:1;margin:-30% 0 0 -30%;border-radius:50%;z-index:4;opacity:0;pointer-events:none;
+  box-shadow:0 0 0 2px rgba(255,255,255,.75),0 0 60px rgba(84,193,255,.55)}
+
+/* Print (the one photo) and flyer */
+.print{position:absolute;z-index:6;padding:9px 9px 34px;background:var(--white);border-radius:6px;will-change:transform,opacity;
+  box-shadow:0 30px 60px -24px rgba(17,17,17,.35),0 0 0 1px rgba(17,17,17,.05);transform-origin:50% 50%}
+.print .ph{position:relative;width:100%;height:100%;border-radius:2px;overflow:hidden;background:#ddd}
+.print .veil{position:absolute;inset:-6px;z-index:2;background-size:cover;background-position:50% 30%;filter:blur(14px) saturate(1.1);transform:scale(1.08);transition:opacity 1.4s var(--ease)}
+.print .leak{position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(80% 60% at 92% 8%,rgba(255,214,170,.85),rgba(255,214,170,0) 60%),radial-gradient(60% 50% at 0% 100%,rgba(255,240,225,.6),rgba(255,240,225,0) 60%);transition:opacity 1.6s var(--ease)}
+.print .cap{position:absolute;left:12px;bottom:9px;font:400 13px/16px var(--serif);color:var(--mute)}
+.orbmode .print .veil{opacity:0}
+.s-alive .print .veil{opacity:.55}.s-alive .print .leak{opacity:.55}
+
+/* State visibility */
+.s-phone .phone .dark,.s-mac .phone .dark{opacity:0}
+.s-mac .phone .dark{opacity:.78}
+.phone .ui,.mac .ui{opacity:0;transition:opacity .6s var(--ease) .25s}
+.s-phone .phone .ui{opacity:1}
+.s-mac .mac .ui{opacity:1}
+.s-mac .mcall{opacity:1}
+.s-mac .wait{opacity:0}
+.macdark{position:absolute;inset:0;background:linear-gradient(155deg,#1b1b1d,#0b0b0c 60%);z-index:6;transition:opacity .8s var(--ease)}
+.macdark::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.06),rgba(255,255,255,0) 40%)}
+.s-phone .macdark,.s-mac .macdark,.s-hand .macdark{opacity:0}
+.onmac{position:absolute;inset:auto 0 18%;z-index:6;text-align:center;color:rgba(253,253,253,.85);font:500 12px/16px var(--sans);opacity:0;transition:opacity .6s var(--ease) .4s}
+.s-mac .onmac{opacity:1}
+
+/* ---------- Geometry: phone first ---------- */
+.mac{left:2%;right:2%;top:14px}
+.phone{right:2%;top:96px;width:33%}
+.print{left:50%;top:40px;width:170px;height:240px;margin-left:-85px}
+.phone .cue{top:9%;height:24px;font-size:11px;padding:0 10px 0 9px;gap:5px}
+.phone .gl{width:30px;height:30px;right:7%} .phone .gl img{width:14px;height:14px}
+.phone .g1{bottom:17%}.phone .g2{bottom:7.5%}
+.phone .self{left:7%;bottom:7.5%;width:22%;height:12%;border-radius:8px}
+.phone .caps{left:7%;right:7%;bottom:28%;font-size:10.5px;line-height:14px}
+.mac .cue{top:12px;height:24px;font-size:11px}
+.mac .caps{left:5%;right:36%;bottom:9%;font-size:11px;line-height:15px}
+.mac .gl{right:3.5%;width:30px;height:30px} .mac .gl img{width:14px;height:14px}
+.mac .g1{bottom:22%}.mac .g2{bottom:7%}
+.mac .self{left:auto;right:12%;bottom:7%;width:13%;height:18%;border-radius:8px}
+.mac .pill{top:10px;height:26px;font-size:11px}
+
+@media (min-width:900px){
+  .page{padding-block:24px 24px;padding-left:max(56px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}
+  header,main,footer{width:100%;max-width:1328px;justify-self:center}
+  .logo{width:80px}
+  main{grid-template-columns:minmax(380px,490px) minmax(0,1fr);gap:24px;align-items:center;align-content:center}
+  h1{font-size:60px;line-height:1.06}
+  .sub{font-size:18px;line-height:28px;margin-top:20px}
+  .signup{margin-top:36px}
+  .done .t{font-size:34px}
+  .stage{height:min(640px,calc(100svh - 150px));min-height:520px;order:0;margin:0}
+  .mac{left:15%;right:4%;top:5%}
+  .phone{left:0;right:auto;top:auto;bottom:1%;width:24%}
+  .print{left:58%;top:20%;width:250px;height:350px;margin-left:-125px}
+  .phone .cue{height:28px;font-size:12px}
+  .phone .caps{font-size:12px;line-height:16px}
+  .phone .gl{width:34px;height:34px} .phone .gl img{width:16px;height:16px}
+  .mac .cue{top:18px;height:32px;font-size:14px;padding:0 15px 0 12px}
+  .mac .caps{left:16%;right:24%;bottom:8%;font-size:17px;line-height:24px}
+  .mac .gl{width:46px;height:46px} .mac .gl img{width:20px;height:20px}
+  .mac .pill{top:16px;height:34px;font-size:14px;padding:0 16px 0 13px}
+  .tl{left:16px;top:15px} .tl i{width:12px;height:12px}
+}
+@media (max-width:899px){.phone .body{border-radius:26px}.phone .scr{border-radius:21px}.phone .self{border-radius:6px}}
+@media (max-width:899px) and (max-height:740px){.stage{height:320px}.phone{top:84px;width:29%}}
+
+/* Load reveal */
+.anim h1 .w>span{animation:rise 1s var(--ease) both;animation-delay:calc(.2s + var(--i) * 60ms)}
+.anim .sub{animation:up .9s var(--ease) .6s both}.anim .signup{animation:up .9s var(--ease) .75s both}
+.anim .rig{animation:fadein 1.6s var(--ease) .1s both}
+@keyframes rise{from{transform:translateY(110%)}}
+@keyframes up{from{opacity:0;transform:translateY(8px)}}
+@keyframes fadein{from{opacity:0;transform:translateY(14px)}}
+@keyframes bar{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+@keyframes breathe{0%,100%{transform:scale(1.015)}50%{transform:scale(1.045)}}
+@keyframes ping{0%{opacity:.9;transform:scale(.6)}100%{opacity:0;transform:scale(2.4)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
+
+/* OG card (?og=1) */
+.og .page{width:1200px;height:630px;min-height:0;padding:44px 56px}
+.og header,.og main{max-width:none}
+.og main{grid-template-columns:430px 1fr;gap:20px}
+.og .signup,.og footer,.og .done{display:none}
+.og h1{font-size:58px}
+.og .sub{font-size:20px;line-height:29px}
+.og .stage{height:500px;min-height:0}
+</style>
+</head>
+<body>
+<div class="page" id="page">
+  <header>
+    <span class="logo" role="img" aria-label="Genita"><svg viewBox="0 0 63.1423 22.6259" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<g id="genita">
+<path id="Vector" d="M50.8522 10.6831C50.8522 9.48162 51.0983 8.41763 51.5905 7.49117C52.0971 6.5647 52.7775 5.84814 53.6316 5.34148C54.5001 4.82034 55.4556 4.55977 56.4978 4.55977C57.4388 4.55977 58.2567 4.74796 58.9515 5.12434C59.6608 5.48624 60.2254 5.94223 60.6452 6.49232V4.7552H63.1423V16.7196H60.6452V14.9391C60.2254 15.5036 59.6536 15.9741 58.9298 16.3505C58.206 16.7269 57.3809 16.9151 56.4544 16.9151C55.4266 16.9151 54.4857 16.6545 53.6316 16.1334C52.7775 15.5977 52.0971 14.8595 51.5905 13.9185C51.0983 12.9631 50.8522 11.8846 50.8522 10.6831ZM60.6452 10.7266C60.6452 9.90143 60.4715 9.18486 60.1241 8.57687C59.7911 7.96888 59.3496 7.50564 58.7995 7.18717C58.2494 6.8687 57.6559 6.70946 57.019 6.70946C56.382 6.70946 55.7885 6.8687 55.2384 7.18717C54.6883 7.49117 54.2396 7.94716 53.8921 8.55516C53.5592 9.14867 53.3927 9.858 53.3927 10.6831C53.3927 11.5083 53.5592 12.2321 53.8921 12.8545C54.2396 13.477 54.6883 13.9547 55.2384 14.2877C55.803 14.6061 56.3965 14.7654 57.019 14.7654C57.6559 14.7654 58.2494 14.6061 58.7995 14.2877C59.3496 13.9692 59.7911 13.506 60.1241 12.898C60.4715 12.2755 60.6452 11.5517 60.6452 10.7266Z" fill="currentColor"/>
+<path id="Vector_2" d="M46.799 6.77452V13.3973C46.799 13.8461 46.9003 14.1718 47.103 14.3744C47.3201 14.5626 47.682 14.6567 48.1887 14.6567H49.7087V16.7195H47.7544C46.6398 16.7195 45.7857 16.459 45.1922 15.9378C44.5986 15.4167 44.3019 14.5699 44.3019 13.3973V6.77452H42.8905V4.75511H44.3019V1.78029H46.799V4.75511H49.7087V6.77452H46.799Z" fill="currentColor"/>
+<path id="Vector_3" d="M40.4946 3.17027C40.0459 3.17027 39.6695 3.01827 39.3655 2.71427C39.0615 2.41028 38.9095 2.0339 38.9095 1.58514C38.9095 1.13639 39.0615 0.76001 39.3655 0.456014C39.6695 0.152017 40.0459 1.81794e-05 40.4946 1.81794e-05C40.9289 1.81794e-05 41.2981 0.152017 41.602 0.456014C41.906 0.76001 42.058 1.13639 42.058 1.58514C42.058 2.0339 41.906 2.41028 41.602 2.71427C41.2981 3.01827 40.9289 3.17027 40.4946 3.17027ZM41.7106 4.75539V16.7198H39.2352V4.75539H41.7106Z" fill="currentColor"/>
+<path id="Vector_4" d="M32.6413 4.55977C33.5822 4.55977 34.4219 4.7552 35.1601 5.14605C35.9129 5.5369 36.4992 6.11595 36.919 6.88318C37.3388 7.6504 37.5487 8.57687 37.5487 9.66257V16.7196H35.095V10.0317C35.095 8.96048 34.8272 8.14259 34.2916 7.57802C33.756 6.99898 33.0249 6.70946 32.0985 6.70946C31.172 6.70946 30.4337 6.99898 29.8836 7.57802C29.348 8.14259 29.0802 8.96048 29.0802 10.0317V16.7196H26.6048V4.7552H29.0802V6.12318C29.4855 5.631 29.9994 5.24738 30.6219 4.97234C31.2588 4.6973 31.932 4.55977 32.6413 4.55977Z" fill="currentColor"/>
+<path id="Vector_5" d="M25.3672 10.4443C25.3672 10.893 25.3383 11.2984 25.2804 11.6603H16.1388C16.2111 12.6157 16.5658 13.3829 17.2027 13.962C17.8397 14.541 18.6214 14.8305 19.5479 14.8305C20.8797 14.8305 21.8206 14.2732 22.3707 13.1585H25.0415C24.6796 14.2587 24.021 15.1635 23.0655 15.8728C22.1246 16.5676 20.952 16.9151 19.5479 16.9151C18.4043 16.9151 17.3765 16.6617 16.4645 16.1551C15.5669 15.6339 14.8576 14.9101 14.3365 13.9837C13.8298 13.0427 13.5765 11.957 13.5765 10.7266C13.5765 9.4961 13.8226 8.41763 14.3148 7.49117C14.8214 6.55023 15.5235 5.82642 16.421 5.31976C17.333 4.8131 18.3753 4.55977 19.5479 4.55977C20.677 4.55977 21.6831 4.80587 22.5661 5.29805C23.4491 5.79024 24.1368 6.48509 24.6289 7.3826C25.1211 8.26564 25.3672 9.2862 25.3672 10.4443ZM22.7833 9.66257C22.7688 8.75058 22.4431 8.01954 21.8061 7.46945C21.1692 6.91937 20.3802 6.64432 19.4393 6.64432C18.5852 6.64432 17.8542 6.91937 17.2462 7.46945C16.6382 8.00507 16.2763 8.73611 16.1605 9.66257H22.7833Z" fill="currentColor"/>
+<path id="Vector_6" d="M5.64565 4.55977C6.57212 4.55977 7.39001 4.74796 8.09934 5.12434C8.82314 5.48624 9.3877 5.94223 9.79303 6.49232V4.7552H12.2901V16.9151C12.2901 18.0152 12.0585 18.9924 11.5953 19.8465C11.1321 20.715 10.4589 21.3954 9.57589 21.8876C8.70733 22.3798 7.66506 22.6259 6.44907 22.6259C4.82776 22.6259 3.48148 22.2422 2.41026 21.475C1.33903 20.7223 0.731039 19.6945 0.586279 18.3916H3.03997C3.22815 19.0141 3.62624 19.5135 4.23424 19.8899C4.85671 20.2807 5.59498 20.4762 6.44907 20.4762C7.44792 20.4762 8.25134 20.1722 8.85933 19.5642C9.4818 18.9562 9.79303 18.0731 9.79303 16.9151V14.9174C9.37323 15.4819 8.80142 15.9596 8.07762 16.3505C7.3683 16.7269 6.55764 16.9151 5.64565 16.9151C4.60338 16.9151 3.64796 16.6545 2.7794 16.1334C1.92531 15.5977 1.24494 14.8595 0.738277 13.9185C0.246093 12.9631 0 11.8846 0 10.6831C0 9.48162 0.246093 8.41763 0.738277 7.49117C1.24494 6.5647 1.92531 5.84814 2.7794 5.34148C3.64796 4.82034 4.60338 4.55977 5.64565 4.55977ZM9.79303 10.7266C9.79303 9.90143 9.61932 9.18486 9.2719 8.57687C8.93895 7.96888 8.49743 7.50564 7.94734 7.18717C7.39725 6.8687 6.80373 6.70946 6.16679 6.70946C5.52984 6.70946 4.93633 6.8687 4.38624 7.18717C3.83615 7.49117 3.38739 7.94716 3.03997 8.55516C2.70702 9.14867 2.54054 9.858 2.54054 10.6831C2.54054 11.5083 2.70702 12.2321 3.03997 12.8545C3.38739 13.477 3.83615 13.9547 4.38624 14.2877C4.9508 14.6061 5.54432 14.7654 6.16679 14.7654C6.80373 14.7654 7.39725 14.6061 7.94734 14.2877C8.49743 13.9692 8.93895 13.506 9.2719 12.898C9.61932 12.2755 9.79303 11.5517 9.79303 10.7266Z" fill="currentColor"/>
+</g>
+</svg>
+</span>
+    <span class="eyebrow">Early access</span>
+  </header>
+
+  <main>
+    <div class="copy">
+      <h1 id="h1">Not an avatar we picked for you.</h1>
+      <p class="sub">Knows you before hello. Sees what you see. Follows you from iPhone to Mac.</p>
+      <div class="signup">
+        <form id="f" novalidate>
+          <label class="sr" for="email">Email address</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false"
+            maxlength="254" placeholder="you@email.com" required aria-describedby="status">
+          <div class="hp" aria-hidden="true"><label for="company">Company</label><input id="company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+          <button class="go" id="go" type="submit">Request early access</button>
+        </form>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="done" id="done" role="status" aria-live="polite">
+        <p class="t">You&rsquo;re in. &#10024;</p>
+        <p class="s">Your Genita will reach out soon.</p>
+        <p class="x">Follow our founder for the latest: <a href="https://x.com/dearsummer0" target="_blank" rel="noopener">@dearsummer0</a></p>
+      </div>
+    </div>
+
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="glow" id="glow"></div>
+      <div class="rig" id="rig">
+        <div class="mac" id="mac">
+          <div class="lid"><div class="scr" id="macScr">
+            <div class="wait"><b>Jin is on your iPhone.</b><span>Talking on your iPhone</span><em>Continue on this Mac</em></div>
+            <div class="mcall">
+              <div class="face" data-f="neutral"></div>
+              <div class="scrim"></div>
+              <div class="tl"><i style="background:var(--tl-r)"></i><i style="background:var(--tl-y)"></i><i style="background:var(--tl-g)"></i></div>
+              <div class="ui">
+                <div class="cue" id="macCue"><span class="bars"><i></i><i></i><i></i></span><span class="cueT">Jin is talking</span></div>
+                <div class="caps" id="macCaps"></div>
+                <div class="gl g1 mic"><img src="assets/glass-mic-icon.png" alt=""></div>
+                <div class="gl g2"><img src="assets/glass-more-icon.png" alt=""></div>
+                <div class="self"></div>
+              </div>
+              <div class="ring" id="macRing"></div>
+            </div>
+            <div class="pill"><i></i>Continued on your Mac</div>
+            <div class="macdark"></div>
+          </div></div>
+          <div class="deck"></div>
+        </div>
+
+        <div class="phone" id="phone">
+          <div class="body"><div class="scr" id="phoneScr">
+            <div class="face" data-f="neutral"></div>
+            <div class="scrim"></div>
+            <div class="ui">
+              <div class="cue" id="phoneCue"><span class="bars"><i></i><i></i><i></i></span><span class="cueT">Jin is talking</span></div>
+              <div class="caps" id="phoneCaps"></div>
+              <div class="gl g1 mic"><img src="assets/glass-mic-icon.png" alt=""></div>
+              <div class="gl g2"><img src="assets/glass-more-icon.png" alt=""></div>
+              <div class="self"></div>
+            </div>
+            <div class="ring" id="phoneRing"></div>
+            <div class="onmac">On your Mac</div>
+            <div class="dark"></div>
+            <div class="island"></div>
+          </div></div>
+        </div>
+
+        <div class="print" id="print"><div class="ph"><div class="face" data-f="neutral"></div><div class="veil" id="veil"></div><div class="leak"></div></div><span class="cap">one photo</span></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://bagel-labs-beni.github.io/genita-legal/privacy/">Privacy</a>
+    <span>&copy; 2026 Bagel Labs</span>
+  </footer>
+</div>
+<script>
+(function(){
+  var DEMO = /*DEMO*/false;
+  var API = 'https://genita-api.thebeni.ai/v1/early-access', KEY = 'genita-early-access';
+  var q = new URLSearchParams(location.search), root = document.documentElement;
+  var og = q.get('og') === '1'; if (og) root.classList.add('og');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function(id){ return document.getElementById(id); };
+  var page = $('page'), stage = $('stage'), rig = $('rig'), phone = $('phone'), mac = $('mac'), print = $('print');
+  var FRAMES = ['neutral','smile','warm','blink','A','O','EH','MBP','FV','U'];
+  var faces = [].slice.call(document.querySelectorAll('.face'));
+  var mode = 'person';
+
+  // Headline words rise from a mask (Beni sibling move).
+  var h1 = $('h1'), text = h1.textContent; h1.textContent = ''; h1.setAttribute('aria-label', text);
+  text.split(' ').forEach(function(w, i){ var o = document.createElement('span'), n = document.createElement('span'); o.className = 'w'; o.setAttribute('aria-hidden','true');
+    n.textContent = w; n.style.setProperty('--i', i); o.appendChild(n); h1.appendChild(o); h1.appendChild(document.createTextNode(' ')); });
+  if (!reduce && !og) { page.classList.add('anim'); setTimeout(function(){ page.classList.remove('anim'); }, 2600); }
+
+  // Face stacks: one generated photo + Muse Image edits (smile, blink, mouth shapes).
+  faces.forEach(function(f){ var b = document.createElement('div'); b.className = 'breathe';
+    FRAMES.forEach(function(n){ var im = new Image(); im.src = 'assets/f-' + n + '.jpg'; im.alt = ''; im.className = 'f-' + n; im.decoding = 'async'; b.appendChild(im); });
+    var c = document.createElement('canvas'); b.appendChild(c); f.appendChild(b); });
+  $('veil').style.backgroundImage = 'url(assets/f-neutral.jpg)';
+  document.querySelector('.mac .face').style.setProperty('--bgimg', 'url(assets/f-neutral.jpg)');
+  function setFace(n){ faces.forEach(function(f){ f.setAttribute('data-f', n); }); }
+
+  // ---------- Orb (port of the app's dots orb: points on a breathing sphere, folded by a slow field) ----------
+  var orb = { agit: 0, agitT: 0, bloom: 0, bloomT: 0, talk: 0 };
+  var N = 1500, pts = [];
+  for (var i = 0; i < N; i++) { var y = 1 - (i + .5) / N * 2, r = Math.sqrt(1 - y * y), th = i * 2.399963; pts.push([Math.cos(th) * r, y, Math.sin(th) * r]); }
+  var off = document.createElement('canvas'); off.width = off.height = 512; var ox = off.getContext('2d');
+  function drawOrb(t){
+    orb.agit += (orb.agitT - orb.agit) * .08; orb.bloom += (orb.bloomT - orb.bloom) * .05;
+    ox.clearRect(0, 0, 512, 512);
+    var br = 1 + .02 * (1 - Math.cos(2 * Math.PI * t / 3000)) + orb.talk * .03 + orb.bloom * .12;
+    var R = 168 * br, ry = t / 9000, cr = Math.cos(ry), sr = Math.sin(ry), amp = .1 + orb.agit * .14 + orb.talk * .05, tt = t / 1600;
+    for (var k = 0; k < N; k++) {
+      var p = pts[k], x = p[0], y = p[1], z = p[2];
+      var d = 1 + amp * Math.sin(3.1 * x + tt) * Math.sin(2.3 * y - tt * .8) * Math.cos(1.7 * z + tt * .6);
+      var X = (x * cr - z * sr) * d, Z = (x * sr + z * cr) * d, Y = y * d * (1 - orb.bloom * .06);
+      var depth = (Z + 1.3) / 2.6, s = 1.3 + depth * 2.1;
+      ox.globalAlpha = .28 + depth * .72 + orb.bloom * .2;
+      ox.fillStyle = depth > .62 ? '#D1EDFF' : '#38BDFF';
+      ox.fillRect(256 + X * R - s / 2, 256 + Y * R - s / 2, s, s);
+    }
+    ox.globalAlpha = 1;
+    document.querySelectorAll('.face canvas').forEach(function(c){
+      var w = c.clientWidth, h = c.clientHeight; if (!w) return; var dpr = Math.min(2, devicePixelRatio || 1);
+      if (c.width !== Math.round(w * dpr)) { c.width = Math.round(w * dpr); c.height = Math.round(h * dpr); }
+      var g = c.getContext('2d'), side = Math.min(c.width, c.height) * (c.height > c.width * 1.4 ? .95 : .78);
+      g.clearRect(0, 0, c.width, c.height); g.drawImage(off, (c.width - side) / 2, c.height * .42 - side / 2, side, side);
+    });
+  }
+
+  // ---------- Story ----------
+  var S = ['s-photo','s-alive','s-phone','s-hand','s-mac'], state = '';
+  function setState(s){ S.forEach(function(x){ stage.classList.toggle(x, x === s || (s === 's-hand' && x === 's-phone')); }); state = s; }
+  function rel(el){ var a = el.getBoundingClientRect(), b = rig.getBoundingClientRect(); return { x: a.left - b.left, y: a.top - b.top, w: a.width, h: a.height }; }
+  var printHome = null;
+  function printTo(target, scaleFit, opacity, dur){
+    var p = { x: print.offsetLeft, y: print.offsetTop, w: print.offsetWidth, h: print.offsetHeight };
+    var tr = 'none';
+    if (target) { var r = rel(target), s = scaleFit ? Math.max(r.w / p.w, r.h / p.h) : 1;
+      tr = 'translate(' + (r.x + r.w / 2 - (p.x + p.w / 2)).toFixed(1) + 'px,' + (r.y + r.h / 2 - (p.y + p.h / 2)).toFixed(1) + 'px) scale(' + s.toFixed(3) + ')'; }
+    print.style.transition = 'transform ' + (dur || 1100) + 'ms cubic-bezier(.32,.72,0,1),opacity ' + Math.round((dur || 1100) * .6) + 'ms cubic-bezier(.23,1,.32,1) ' + Math.round((dur || 1100) * .45) + 'ms';
+    print.style.transform = tr + (target ? '' : ' rotate(-3deg)'); print.style.opacity = opacity;
+  }
+
+  // Captions: words land one by one, then fade out.
+  var talkTimer = 0, talking = false, listening = false, mouthSeq = ['A','EH','O','MBP','U','FV','A','EH','neutral','O','A','MBP'];
+  function mouths(on){ talking = on; [ $('phoneCue'), $('macCue') ].forEach(function(c){ c.parentNode.parentNode.classList.toggle('talking', on && !listening); });
+    clearInterval(talkTimer); orb.talk = on ? 1 : 0;
+    if (on && !reduce) { var k = 0; talkTimer = setInterval(function(){ if (listening) return; setFace(mode === 'person' ? mouthSeq[k++ % mouthSeq.length] : 'neutral'); }, 120); }
+    else if (!listening) setFace('neutral'); }
+  function caption(box, u, c, ms, cb){
+    box.className = 'caps'; box.innerHTML = '';
+    var pu = document.createElement('p'); pu.className = 'u'; pu.textContent = u; box.appendChild(pu);
+    var pc = document.createElement('p'); pc.className = 'c'; box.appendChild(pc);
+    var ws = c.split(' ').map(function(w){ var s = document.createElement('span'); s.className = 'wd'; s.textContent = w; pc.appendChild(s); pc.appendChild(document.createTextNode(' ')); return s; });
+    var step = Math.max(140, (ms - 900) / ws.length);
+    later(function(){ mouths(true); ws.forEach(function(s, i){ later(function(){ s.classList.add('on'); }, i * step); }); }, 500);
+    later(function(){ mouths(false); setFace('smile'); later(function(){ setFace('neutral'); }, 700); }, 500 + ws.length * step + 200);
+    later(function(){ box.classList.add('out'); if (cb) cb(); }, ms);
+  }
+  var timers = [];
+  function later(fn, ms){ timers.push(setTimeout(fn, ms)); }
+  function clearAll(){ timers.forEach(clearTimeout); timers = []; clearInterval(talkTimer); }
+
+  function story(){
+    clearAll(); listening = false;
+    $('phoneCaps').innerHTML = ''; $('macCaps').innerHTML = '';
+    setState('s-photo'); setFace('neutral'); printTo(null, false, 1, 10);
+    later(function(){ setState('s-alive'); setFace('blink'); later(function(){ setFace('smile'); }, 180); }, 1500);
+    later(function(){ setFace('neutral'); printTo(phone.querySelector('.scr'), true, 0, 1300); }, 3100);
+    later(function(){ setState('s-phone'); }, 3700);
+    later(function(){ caption($('phoneCaps'), 'What can I make with these?', 'I see onions, tomatoes and garlic. Roasted tomato soup?', 3600); }, 4300);
+    later(function(){ caption($('phoneCaps'), 'Help me pick an outfit.', 'Can you move our call to your Mac?', 2800); }, 8000);
+    later(function(){ mac.classList.add('pressing'); later(function(){ mac.classList.remove('pressing'); }, 260); }, 10600);
+    later(function(){ setState('s-hand'); handoff(); }, 10900);
+    later(function(){ setState('s-mac'); pulse($('macRing')); }, 11900);
+    later(function(){ caption($('macCaps'), 'The white one or the black one?', 'Black. It’s Halloween, and it suits you.', 3800); }, 12800);
+    later(function(){ if (!document.hidden) story(); else later(story, 1000); }, 18800);
+  }
+  // The hero move: the face leaves the phone and lands in the Mac window.
+  function handoff(){
+    var from = rel(phone.querySelector('.scr')), to = rel($('macScr'));
+    var fl = document.createElement('div'); fl.className = 'face';
+    fl.setAttribute('data-f', 'smile'); fl.innerHTML = phone.querySelector('.face').innerHTML;
+    var c = fl.querySelector('canvas'); if (c) { var nc = document.createElement('canvas'); c.replaceWith(nc); }
+    if (mode === 'orb') fl.style.background = 'radial-gradient(90% 70% at 50% 40%,#16314A,#0C1824 70%)';
+    fl.style.cssText += ';position:absolute;z-index:7;left:' + from.x + 'px;top:' + from.y + 'px;width:' + from.w + 'px;height:' + from.h + 'px;border-radius:30px;box-shadow:0 30px 60px -20px rgba(17,17,17,.5);will-change:transform,opacity;transform-origin:0 0';
+    faces.push(fl); rig.appendChild(fl);
+    var sx = to.w / from.w, sy = to.h / from.h, s = Math.min(sx, sy);
+    var dx = to.x + (to.w - from.w * s) / 2 - from.x, dy = to.y + (to.h - from.h * s) / 2 - from.y;
+    fl.animate([{ transform: 'none', opacity: 1, borderRadius: '30px' }, { transform: 'translate(' + dx + 'px,' + (dy - 30) + 'px) scale(' + s * .9 + ')', opacity: 1, offset: .7 },
+      { transform: 'translate(' + dx + 'px,' + dy + 'px) scale(' + s + ')', opacity: 0 }], { duration: 1200, easing: 'cubic-bezier(.32,.72,0,1)', fill: 'forwards' })
+      .onfinish = function(){ fl.remove(); faces.splice(faces.indexOf(fl), 1); };
+  }
+  function pulse(el){ if (reduce || !el.animate) return; el.animate([{ opacity: .9, transform: 'scale(.5)' }, { opacity: 0, transform: 'scale(2.2)' }], { duration: 1300, easing: 'cubic-bezier(.23,1,.32,1)' }); }
+
+  // ---------- Pointer and tilt parallax ----------
+  var tgt = { x: 0, y: 0 }, cur = { x: 0, y: 0 }, lastMove = -1e9;
+  function point(x, y){ tgt.x = Math.max(-1, Math.min(1, x / innerWidth * 2 - 1)); tgt.y = Math.max(-1, Math.min(1, y / innerHeight * 2 - 1)); lastMove = performance.now(); }
+  addEventListener('pointermove', function(e){ point(e.clientX, e.clientY); }, { passive: true });
+  if (window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission !== 'function')
+    addEventListener('deviceorientation', function(e){ if (e.gamma == null) return; tgt.x = Math.max(-1, Math.min(1, e.gamma / 25)); tgt.y = Math.max(-1, Math.min(1, (e.beta - 50) / 25)); lastMove = performance.now(); }, { passive: true });
+  var glow = $('glow');
+  function frame(t){
+    if (t - lastMove > 3000) { tgt.x = Math.sin(t / 4200) * .35; tgt.y = Math.cos(t / 5300) * .25; }
+    cur.x += (tgt.x - cur.x) * .05; cur.y += (tgt.y - cur.y) * .05;
+    rig.style.transform = 'rotateY(' + (cur.x * 4).toFixed(2) + 'deg) rotateX(' + (cur.y * -3).toFixed(2) + 'deg)';
+    phone.style.translate = (cur.x * 10).toFixed(1) + 'px ' + (cur.y * 6).toFixed(1) + 'px';
+    mac.style.translate = (cur.x * -4).toFixed(1) + 'px ' + (cur.y * -2).toFixed(1) + 'px';
+    glow.style.transform = 'translate(' + (cur.x * -30).toFixed(1) + 'px,' + (cur.y * -20).toFixed(1) + 'px)';
+    if (mode === 'orb') drawOrb(t);
+    raf = requestAnimationFrame(frame);
+  }
+  var raf = 0;
+
+  // ---------- Typing reaction ----------
+  var email = $('email'), form = $('f'), btn = $('go'), status = $('status'), hp = $('company');
+  function cueText(s){ document.querySelectorAll('.cueT').forEach(function(c){ c.textContent = mode === 'orb' && s === 'Jin is talking' ? 'Talking' : s; }); }
+  function listen(on){ listening = on; document.querySelectorAll('.cue').forEach(function(c){ c.parentNode.parentNode.classList.toggle('talking', !on && talking); });
+    cueText(on ? (mode === 'orb' ? 'Listening' : 'Jin is listening') : 'Jin is talking'); if (on) setFace(mode === 'person' ? 'warm' : 'neutral'); orb.agitT = on ? .4 : 0; }
+  email.addEventListener('focus', function(){ listen(true); });
+  email.addEventListener('blur', function(){ listen(false); });
+  email.addEventListener('input', function(){
+    orb.agitT = Math.min(1, .4 + email.value.length * .03); orb.agit += .25;
+    document.querySelectorAll('.bars i').forEach(function(b, i){ if (!b.animate || reduce) return; b.animate([{ transform: 'scaleY(.4)' }, { transform: 'scaleY(' + (.7 + Math.random() * .3) + ')' }, { transform: 'scaleY(.4)' }], { duration: 260, delay: (i % 3) * 40 }); });
+    if (mode === 'person' && !reduce) { setFace('blink'); setTimeout(function(){ if (listening) setFace('warm'); }, 90); }
+    if (status.classList.contains('err')) say('');
+  });
+
+  function valid(v){ return v.length <= 254 && /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/.test(v) && !/\.\./.test(v); }
+  function say(m, kind){ status.textContent = m || ''; status.classList.toggle('err', !!kind); email.setAttribute('aria-invalid', kind === 'field' ? 'true' : 'false'); }
+  function celebrate(){
+    clearAll(); listening = false; setState('s-mac'); cueText('Jin is talking'); orb.bloomT = 1; orb.agitT = 0;
+    setFace('smile'); pulse($('macRing')); pulse($('phoneRing'));
+    if (mode === 'orb') { later(function(){ orb.bloomT = .25; }, 900); }
+    caption($('macCaps'), 'Count me in.', mode === 'orb' ? 'Then I’ll see you soon.' : 'Good. I’ll see you soon.', 3200, function(){ later(function(){ setFace('smile'); }, 300); });
+  }
+  function done(animated){ page.classList.add('is-done'); if (animated) celebrate(); else { setState('s-mac'); setFace('smile'); } }
+  if (!DEMO) { try { if (localStorage.getItem(KEY) === '1' && !og) done(false); } catch (e) {} }
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var v = email.value.trim().toLowerCase();
+    if (!valid(v)) { say('That email doesn’t look quite right.', 'field'); email.focus(); return; }
+    btn.disabled = true; btn.textContent = 'Sending…'; say('');
+    function fin(){ btn.disabled = false; btn.textContent = 'Request early access'; }
+    if (DEMO) { setTimeout(function(){ fin(); done(true); }, 700); return; }
+    var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null, timer = setTimeout(function(){ if (ctrl) ctrl.abort(); }, 12000);
+    fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'omit', signal: ctrl ? ctrl.signal : undefined,
+      body: JSON.stringify({ email: v, source: 'teaser', company: hp.value || '' }) })
+    .then(function(r){ clearTimeout(timer); fin();
+      if (r.ok) { try { localStorage.setItem(KEY, '1'); } catch (e) {} done(true); return; }
+      if (r.status === 400 || r.status === 422) say('That email doesn’t look quite right.', 'field');
+      else if (r.status === 429) say('Lots of hellos at once. Try again in a minute.', true);
+      else say('Something went quiet on our side. Please try again.', true);
+    }).catch(function(){ clearTimeout(timer); fin(); say('We couldn’t reach Genita. Check your connection and try again.', true); });
+  });
+
+  // Variant switch (Person / Orb): ?v=orb, or window.genitaMode('orb') from a host page.
+  function setMode(m){ mode = m === 'orb' ? 'orb' : 'person'; page.classList.toggle('orbmode', mode === 'orb');
+    document.querySelector('.wait b').textContent = mode === 'orb' ? 'Your Genita is on your iPhone.' : 'Jin is on your iPhone.';
+    document.querySelector('.print .cap').textContent = mode === 'orb' ? 'first light' : 'one photo';
+    cueText(listening ? (mode === 'orb' ? 'Listening' : 'Jin is listening') : 'Jin is talking');
+    if (mode === 'orb' && (reduce || og)) drawOrb(1200); }
+  window.genitaMode = setMode; window.genitaReplay = function(){ page.classList.remove('is-done'); email.value = ''; orb.bloomT = 0; if (!reduce && !og) story(); };
+  setMode(q.get('v') === 'orb' ? 'orb' : 'person');
+
+  if (reduce || og) { setState(og ? 's-mac' : 's-mac'); print.style.opacity = 0; setFace(og ? 'smile' : 'neutral');
+    $('macCaps').innerHTML = '<p class="u">The white one or the black one?</p><p class="c">Black. It’s Halloween, and it suits you.</p>';
+    if (og) document.querySelectorAll('.caps .wd').forEach(function(s){ s.classList.add('on'); });
+    if (mode === 'orb') drawOrb(1200); }
+  else { story(); raf = requestAnimationFrame(frame); }
+})();
+</script>
+</body>
+</html>
